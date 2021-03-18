@@ -17,13 +17,13 @@ const StartGameBtn = document.querySelector('#startGameBtn')
 const modalE1 = document.querySelector('#modalE1')
 
 //Add the sound audios 
-const startGameAudio = new Audio('./audio/startGame.mp3')
-const endGameAudio = new Audio('./audio/endGame.mp3')
-const shootAudio = new Audio('./audio/shoot.mp3')
-const enemyHitAudio = new Audio('./audio/enemyHit.mp3')
-const obtainPowerUpAudio = new Audio('./audio/obtainPowerUp.mp3')
-const enemyEliminatedAudio = new Audio('./audio/enemyEliminated.mp3')
-const backgroundMusicAudio = new Audio('./audio/backgroundMusic.mp3')
+const startGameAudio = new Audio('https://github.com/JackCree/asteroidGame/blob/main/audio/startGame.mp3')
+const endGameAudio = new Audio('https://github.com/JackCree/asteroidGame/blob/main/audio/endGame.mp3')
+const shootAudio = new Audio('https://github.com/JackCree/asteroidGame/blob/main/audio/shoot.mp3')
+const enemyHitAudio = new Audio('https://github.com/JackCree/asteroidGame/blob/main/audio/enemyHit.mp3')
+const obtainPowerUpAudio = new Audio('https://github.com/JackCree/asteroidGame/blob/main/audio/obtainPowerUp.mp3')
+const enemyEliminatedAudio = new Audio('https://github.com/JackCree/asteroidGame/blob/main/audio/enemyEliminated.mp3')
+const backgroundMusicAudio = new Audio('https://github.com/JackCree/asteroidGame/blob/main/audio/backgroundMusic.mp3?raw=true')
 backgroundMusicAudio.loop = true
 
 const scene = {
@@ -109,7 +109,7 @@ class Projectile {
 /*---Create the power up 
 -----------------------------*/
 const powerUpImg = new Image()
-powerUpImg.src = './img/lightning.png'
+powerUpImg.src = 'https://github.com/JackCree/asteroidGame/blob/main/img/lightning.png?raw=true'
 
 class PowerUp {
 	constructor(x, y, velocity) {
@@ -417,7 +417,7 @@ function animate() {
 	animationId = requestAnimationFrame(animate)
 	frame++
 
-	if (frame % 70 === 0) spawnEnemies() //Prevent bugs keeping spawing even after the game has ended
+	if (frame % 40 === 0) spawnEnemies() //Prevent bugs keeping spawing even after the game has ended
 		if (frame % 300 === 0) spawnPowerups() //Prevent bugs spwaning one power-up 
 
 	//Colorize game : blur effect on moves
@@ -717,5 +717,13 @@ addEventListener('keydown', ({keyCode}) => {
 			break; 
 		case 68 :
 			player.velocity.x += 1;
-	}			
-})
+      			break;
+     			//ZQSD Controls
+    		case 90 :
+			player.velocity.y -= 1;
+      			break;
+    		case 81 :
+			player.velocity.x -= 1;
+		      break;
+		}			
+	})
