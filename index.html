@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Codtober 06: Asteroid</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover, user-scalable=no, shrink-to-fit=no" />
+<title>Asteroid</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<body>
+<div class="fixed text-white text-sm ml-2 mt-1 select-none"><span>Score: </span><span id="ScoreE1">0</span></div>
+
+	<div class="fixed inset-0 flex items-center justify-center" id="modalE1">	
+		<div id ="whiteModalEl" class="bg-white max-w-md w-full p-6 text-center">
+			<h1 class="text-4xl font-bold leading-none" id="bigScoreE1">0</h1>
+			<p class="text-sm text-gray-700 mb-4">Points</p>
+			<div>
+				<button class="bg-blue-500 text-white w-full py-3 rounded-full text-sm" id="startGameBtn">START GAME</button>
+			</div>
+		</div>	
+	</div>
+
+	<canvas></canvas>
+
+	<!--Library for particles-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
+	<script src="script.js"></script>	
+</body>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
