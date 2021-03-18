@@ -1,4 +1,4 @@
-# asteroidGame
+# Asteroid Game
 
 ## Build a geometric, 2D platformer like Asteroid
 
